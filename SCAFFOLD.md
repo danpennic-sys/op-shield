@@ -9,7 +9,8 @@ op-shield/
 ├── README.md
 ├── SCAFFOLD.md
 ├── docs/
-│   └── PAYLOAD-SCHEMA.md
+│   ├── PAYLOAD-SCHEMA.md
+│   └── SCANNER-SCHEMES.md
 ├── evidence/
 │   └── sample-payload.json
 ├── samples/
@@ -26,9 +27,16 @@ op-shield/
 
 Sample inner payload is in `evidence/sample-payload.json`.
 
+## Scanner Schemes
+
+See `docs/SCANNER-SCHEMES.md` for six deterministic analysis approaches (static inventory, runtime observation, config policy diff, dependency graph, differential baseline, embedded/Yocto).
+
+Recommended Phase I path: Scheme 1 + 3 + 4 on a reference Linux image, then seal the findings.
+
 ## Next
 
-- Wire real package/service discovery (dpkg/apt, systemd, or container inspect).
+- Implement one or more scanner schemes in `src/`.
+- Wire real package/service discovery.
 - Add sealer function that produces a full CONTRACT-v1 JSON.
 - Generate signed conformance vectors.
 - Align to Navy DON27BZ02-NV010 Phase I statement of work.
