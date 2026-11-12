@@ -1,0 +1,23 @@
+{
+  "schema": "op-shield/v0.1",
+  "platform_id": "navy-demo-linux-01",
+  "analysis_id": "harden-2026-11-11-001",
+  "timestamp_utc": "2026-11-11T22:00:00Z",
+  "input_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "findings": {
+    "required_packages": ["busybox", "openssh-server"],
+    "removed_packages": ["telnetd", "ftp"],
+    "disabled_services": ["telnet", "ftp"],
+    "config_changes": [
+      {
+        "path": "/etc/ssh/sshd_config",
+        "action": "restrict",
+        "before_hash": "a1b2c3d4e5f6789012345678901234567890abcd",
+        "after_hash": "fedcba0987654321fedcba0987654321fedcba09"
+      }
+    ],
+    "risk_score": 12
+  },
+  "recommendation_hash": "0123456789abcdef0123456789abcdef01234567",
+  "operator_notes": "Minimal autonomous platform baseline. No network services beyond required SSH."
+}
