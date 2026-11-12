@@ -1,0 +1,6 @@
+{
+  "id": "navy-demo-linux-01",
+  "required": ["busybox", "openssh-server"],
+  "remove": ["telnetd", "ftp", "wget"],
+  "disable": ["telnet", "ftp"]
+}
