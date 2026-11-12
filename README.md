@@ -37,6 +37,19 @@ Secondary fit: USSF Defensive Cyber Operations for Space (on-orbit monitoring, l
 - Sequence: DISCOVER → PROVE → PREPARE → RELEASE → OPERATE → IMPROVE.
 - PQC path can be extended later (v1 remains honest: no post-quantum claims until wired).
 
+## Scaffold & Evidence
+
+See `SCAFFOLD.md` for current layout and status.
+
+- Domain payload schema: `docs/PAYLOAD-SCHEMA.md`
+- Sample inner payload: `evidence/sample-payload.json`
+- Analysis stub: `src/opshield.py`
+- Demo platform: `samples/platform-demo.json`
+
+Run: `python3 src/opshield.py samples/platform-demo.json`
+
+Sealing path follows DailySeal / VeriQuote pattern into CONTRACT-v1 bundles verifiable by existing `qg verify`.
+
 ## Next Steps
 
 1. Draft Phase I proposal skeleton for DON27BZ02-NV010.
@@ -46,7 +59,7 @@ Secondary fit: USSF Defensive Cyber Operations for Space (on-orbit monitoring, l
 
 ## Status
 
-Concept initiated 2026-11-11. Private repository. Not yet demonstrated.
+Concept initiated 2026-11-11. Scaffold added 2026-11-12. Private repository. Not yet demonstrated.
 
 ---
 
